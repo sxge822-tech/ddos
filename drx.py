@@ -1,4 +1,4 @@
-from telebot import TeleBot
+import TeleBot
 import json
 import requests
 import datetime
