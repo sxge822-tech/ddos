@@ -1,4 +1,8 @@
-import TeleBot
+try:
+    import telebot
+    print("Telebot imported successfully")
+except Exception as e:
+    print("IMPORT ERROR:", e)
 import json
 import requests
 import datetime
