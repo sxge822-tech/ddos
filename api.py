@@ -9,7 +9,6 @@ API_AUTH_TOKEN = "DRX_POWER_ULTRA_V4"
 
 @app.route('/hit', methods=['GET'])
 def start_attack():
-    # Auth Check
     token = request.args.get('token')
     if token != API_AUTH_TOKEN:
         return jsonify({"status": "error", "message": "Unauthorized Access"}), 403
@@ -48,4 +47,4 @@ def start_attack():
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 10000))
-    app.run(host='0.0.0.0', debug=True)
+    app.run(host='0.0.0.0', port=port, debug=False)
